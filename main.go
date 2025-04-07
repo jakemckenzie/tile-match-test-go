@@ -4,12 +4,13 @@ import (
 	"image/color"
 	"log"
 	"math"
-	"strconv"
+
+	// "strconv"
 
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/hajimehoshi/ebiten/v2/text"
+	// "github.com/hajimehoshi/ebiten/v2/text"
 	"github.com/hajimehoshi/ebiten/v2/vector"
-	"golang.org/x/image/font/basicfont"
+	// "golang.org/x/image/font/basicfont"
 )
 
 var outlineColor = color.RGBA{0, 0, 0, 89}
@@ -423,9 +424,9 @@ func (g *Game) Update() error {
 
 func (g *Game) Draw(screen *ebiten.Image) {
 	drawField(screen, g.world.Field, blockSize)
-	text.Draw(screen, "Score: "+strconv.Itoa(g.world.Score), basicfont.Face7x13, 10, 20, color.Black)
-	text.Draw(screen, "Combo: "+strconv.Itoa(g.world.Combo), basicfont.Face7x13, 10, 40, color.Black)
-	text.Draw(screen, "Instructions: Match at least 4 blocks", basicfont.Face7x13, 10, 60, color.Black)
+	// text.Draw(screen, "Score: "+strconv.Itoa(g.world.Score), basicfont.Face7x13, 10, 20, color.Black)
+	// text.Draw(screen, "Combo: "+strconv.Itoa(g.world.Combo), basicfont.Face7x13, 10, 40, color.Black)
+	// text.Draw(screen, "Instructions: Match at least 4 blocks", basicfont.Face7x13, 10, 60, color.Black)
 }
 
 func (g *Game) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeight int) {
